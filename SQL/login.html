@@ -1,0 +1,81 @@
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <script src="login.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="img/img.ico" />
+        <h1>NFT</h1>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button class="b1"><a href="/login" id="Login">Login</a></button>
+        <button class="b2">
+          <a href="/signup" id="Signup">Sign Up</a>
+        </button>
+      </nav>
+    </header>
+
+
+    <form action="/login" method="post">
+      <div class="form" name="login-form">
+        <h1>LOG IN</h1>
+        
+          <p>WalletID :</p>
+          <input
+            type="text"
+            name="walletid"
+            placeholder="WalletID"
+            id="walletid"
+          />
+
+          <p>Password :</p>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password Here"
+            id="pass"
+          />
+
+          <button type="submit" name="" value="Submit">Log in </button>
+    </form>
+
+
+      <p class="text">
+        Don't Have an account?
+        <a href="/signup">Sign Up here</a>
+      </p>
+
+      <!-- <script>
+        // validate the form function validate() { var walletid =
+        document.getElementById("walletid").value; var pass =
+        document.getElementById("pass").value; var regwalletid =
+        /^[a-zA-Z0-9]+$/; var regpass = /^[a-zA-Z0-9*#!@$%^&()]+$/; if (walletid
+        == "" || regwalletid.test(walletid) == false) { alert("WalletID cannot
+        be empty or enter a valid WalletID"); return false; } else if (pass ==
+        "" || regpass.test(pass) == false) { alert("Password cannot be empty or
+        enter a valid password"); return false; } else { return true; } }
+      </script> -->
+    </div>
+  </body>
+</html>
+

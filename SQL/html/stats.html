@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/AboutNFT.css">
+    <script src="https://kit.fontawesome.com/750612b524.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 40%;
+            padding: 10px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            height: 200px;
+            margin-left: 175px;
+            cursor: pointer;
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        .row {
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container1 (positioning is needed to position the close button and the text) */
+        .container1 {
+            position: absolute;
+            display: none;
+            margin-left: 300px;
+
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: black;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        h1{
+            margin-left: 175px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  NAVBAR -->
+    <nav class="our-nav flex-div">
+        <div class="nav-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-left flex-div">
+            <div class="search-box flex-div">
+
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+        </div>
+
+        <div class="nav-middle flex-div">
+            <div class="amount-eth flex-div">
+                <i class="fab fa-ethereum"></i>
+                <p>134.78 ETH</p>
+            </div>
+            <div class="notif flex-div">
+                <i class="fas fa-bell"></i>
+
+            </div>
+        </div>
+        <div class="nav-right flex-div">
+            <div class="profil flex-div">
+                <img src="./img/cat/ranveer.jpeg" alt="My profile">
+                <p>Singhveer Rangh</p>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--  SIDE BAR -->
+    <div class="side-bar">
+        <div class="logo">
+            <a href = "index.html"><img src="./img/img.ico" alt="logo"></a>
+        </div>
+        <div class="shortcut-links">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="index.html"><i class="fas fa-gem"></i></a>
+            <a href="index.html"><i class="fas fa-heart"></i></a>
+            <a href="index.html"><i class="fas fa-award"></i></a>
+            <a href="Main_marketplace.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <a href="index.html"><i class="fas fa-cog"></i></a>
+        </div>
+    </div>
+
+    <!--  MAIN CONTENT -->
+    <h1>Plotted Statistics &nbsp; (Click on the image to zoom)</h1>
+    <!-- The grid: four columns -->
+    <div class="row">
+        <div class="column">
+            <img src="./img/cat/graph1.jpg" alt="graph1" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="./img/cat/graph2.png" alt="graph2" onclick="myFunction(this);">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="./img/cat/graph3.png" alt="graph3" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="./img/cat/graph4.png" alt="graph4" onclick="myFunction(this);">
+        </div>
+    </div>
+    <br><br>
+    <!-- The expanding image container1 -->
+    <div class="container1">
+        <!-- Close the image -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+        <!-- Expanded image -->
+        <img id="expandedImg" style="width:100%">
+
+        <!-- Image text -->
+        <div id="imgtext"></div>
+    </div>
+
+</body>
+
+<script>
+    function myFunction(imgs) {
+        // Get the expanded image
+        var expandImg = document.getElementById("expandedImg");
+        // Get the image text
+        var imgText = document.getElementById("imgtext");
+        // Use the same src in the expanded image as the image being clicked on from the grid
+        expandImg.src = imgs.src;
+        // Use the value of the alt attribute of the clickable image as text inside the expanded image
+        imgText.innerHTML = imgs.alt;
+        // Show the container1 element (hidden with CSS)
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
+
+</html>

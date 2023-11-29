@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/profile_style.css">
+    <script src="https://kit.fontawesome.com/750612b524.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--  NAVBAR -->
+    <nav class="our-nav flex-div">
+        <div class="nav-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-left flex-div">
+            <div class="search-box flex-div">
+
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+        </div>
+
+        <div class="nav-middle flex-div">
+            <div class="amount-eth flex-div">
+                <i class="fab fa-ethereum"></i>
+                <p>134.78 ETH</p>
+            </div>
+            <div class="notif flex-div">
+                <i class="fas fa-bell"></i>
+
+            </div>
+        </div>
+
+        <!-- <div class="nav-right flex-div">
+            <div class="profil flex-div">
+                <img src="ranveer.jpeg" alt="My profile">
+                <p>Singhveer Rangh</p>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+
+        </div> -->
+    </nav <!-- SIDE BAR -->
+    <div class="side-bar">
+        <div class="logo">
+            <img src="./img/img.ico" alt="logo">
+        </div>
+        <div class="shortcut-links">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-gem"></i></a>
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="stats.html"><i class="fas fa-award"></i></a>
+            <a href="Main_marketplace.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <a href="#"><i class="fas fa-cog"></i></a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="large-container">
+            <div class="main-container">
+                <% var imagedp="./nft_resources/user/"+(userdata[0].user_id).toString()+".jpg"; 
+                     %>
+                <div class="nft">
+                    <img src="<%=imagedp%>" alt="nft">
+                </div>
+                <div class="nft-txt">
+                    
+                            <h1 class="title-nft">
+                                <%=userdata[0].f_name+ " "+userdata[0].l_name %> 
+                            </h1>
+                            <p class="whitetext">User Since <%=userdata[0].date_of_join.slice(0,10)%></p>
+                </div>
+
+            </div>
+            <hr>
+            <div class="container">
+                <ul>
+                    <li><a href="profile">Owned NFTs</a></li>
+                    <li><a href="createnft" class="active">Create NFT ➕</a></li>
+
+
+                </ul>
+                <transa>
+            </div>
+            <hr>
+
+            <div class="list-container" style="margin-left:20%;margin-right:20%">
+                <form action="/createnft" method="post" enctype="multipart/form-data">
+                   <div>
+                    <input type="radio" id="collection" name="collectioncheck" value="collection">
+                   <label for="collection">Collection</label><br>
+                   <input type="radio" id="singlenft" name="collectioncheck" value="singlenft">
+                   <label for="singlenft">NFT</label><br>
+                </div>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="nftname">NFT/Collection Name</label><br>
+                      
+                    <input type="text" id="genre" name="genre"><br>
+                    <label for="genre">Genre</label><br>
+
+                    <input type="text" id="celebrity" name="celebrity"><br>
+                    <label for="celebrity">Celebrity</label><br>
+
+                    
+                    <textarea id="desc" name="desc"></textarea><br>
+                    <label for="nftdescription">NFT Description</label><br>
+                      
+                    
+                    <input type="number" id="price" name="price"><br>
+                    <label for="price">Price</label><br>
+
+                    
+                    <input type="text" id="features" name="features"><br>
+                    <label for="features">NFT Features</label><br>
+
+                    
+
+                    <select name="blockchain" id="blockchain">
+
+                    <option value="BSC">BSC</option>
+                    <option value="ETH">ETH</option>
+
+                    </select><label for="blockchain">Choose a Blockchain:</label>
+
+                    <div>
+                    
+
+                    <br>
+                    
+                    <input type="file" id="file" name="file" multiple><br><br>
+                    <label for="file">NFT File:</label><br>
+
+                    <input type="submit" name="button" value="Create NFT">
+                </form> 
+                  
+
+            </div>
+
+
+
+</body>
+
+</html>

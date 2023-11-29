@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/profile_style.css">
+    <script src="profile.js"></script>
+    <script src="https://kit.fontawesome.com/750612b524.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    <!--  NAVBAR -->
+    <nav class="our-nav flex-div">
+        <div class="nav-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-left flex-div">
+            <div class="search-box flex-div">
+
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+        </div>
+
+        <div class="nav-middle flex-div">
+            <div class="amount-eth flex-div">
+                <i class="fab fa-ethereum"></i>
+                <p>134.78 ETH</p>
+            </div>
+            <div class="notif flex-div">
+                <i class="fas fa-bell"></i>
+
+            </div>
+
+        </div>
+        <div class="nav-right flex-div">
+            <div class="profil flex-div">
+
+                <p>Logout </p>
+                <i class="fas fa-sign-out"></i>
+            </div>
+
+        </div>
+
+        <!-- <div class="nav-right flex-div">
+            <div class="profil flex-div">
+                <img src="ranveer.jpeg" alt="My profile">
+                <p>Singhveer Rangh</p>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+
+        </div> -->
+    </nav <!-- SIDE BAR -->
+    <div class="side-bar">
+        <div class="logo">
+            <img src="./img/img.ico" alt="logo">
+        </div>
+        <div class="shortcut-links">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="index.html"><i class="fas fa-gem"></i></a>
+            <a href="index.html"><i class="fas fa-heart"></i></a>
+            <a href="index.html"><i class="fas fa-award"></i></a>
+            <a href="index.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <a href="index.html"><i class="fas fa-cog"></i></a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="large-container">
+            <div class="main-container">
+                <% var imagedp="./nft_resources/user/"+(userdata[0].user_id).toString()+".jpg"; 
+                     %>
+                <div class="nft">
+                    <img src="<%=imagedp%>" alt="nft">
+                </div>
+                <div class="nft-txt">
+                    
+                            <h1 class="title-nft">
+                                <%=userdata[0].f_name+ " "+userdata[0].l_name %> 
+                            </h1>
+                            <p class="whitetext">User Since <%=userdata[0].date_of_join.slice(0,10)%></p>
+                </div>
+
+            </div>
+            <hr>
+            <div class="container">
+                <ul>
+                    <li><a href="profile" class="active">Owned NFTs</a></li>
+                    <li><a href="createnft">Create NFT ➕</a></li>
+
+                </ul>
+                <transa>
+            </div>
+            <hr>
+
+            <div class="list-container">
+                
+                <% 
+                var size = siz,Q=query;
+                for (var i = 0; i < size; i++) { 
+              %>
+                <div class="nft-list">
+                    <%         var imgloc="./nft_resources/nft/"+(Q[i].NFT_id).toString()+".jpg"; %>
+                    
+                    <form action="/aboutnft" method="post">
+                    <!-- <a href="/aboutnft"><img src="<%=imgloc%>" class="thumbnail"></a> -->
+                    <input type="image" src="<%=imgloc%>"  alt="Submit" width="200" height="150">
+
+                    <input name="id" type="text" value="<%=Q[i].NFT_id%>" hidden >
+
+                </form>
+                    <div class="nft-list-detail">
+                        <!-- <div class="creator creator-2 flex-div">
+                            <img src="./img/cat/creatoe2.jpeg">
+                            <p>Snoop Donald</p>
+
+                        </div> -->
+                        <h1><%=Q[i].name%> </h1>
+                            <form action="/listnft" method="post">
+                                <div class="nft-list-buttons">
+                               
+                                <button class="sell-button" type="submit" >SELL</button>
+
+                                </div>
+                                <input name="id" type="text" value="<%=Q[i].NFT_id%>" hidden >
+                                <input name="nftname" type="text" value="<%=Q[i].name%>" hidden >
+                                <input name="onsale" type="text" value="<%=Q[i].onsale%>" hidden >
+                            </form>
+
+
+                    </div>
+
+                </div>
+                <% } %>
+
+
+            </div>
+
+        </div>
+
+
+
+</body>
+
+
+</html>

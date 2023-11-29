@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link href="/style2.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="img/img.ico" />
+        <h1>NFT</h1>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button class="b1"><a href="/login" id="Login">Login</a></button>
+        <button class="b2">
+          <a href="/signup" id="Signup">Sign Up</a>
+        </button>
+      </nav>
+    </header>
+
+
+    <form action="/signup" method="post">
+    <div class="form" id="form2" >
+      <h1>SIGN UP</h1>
+      <p>Name :</p>
+      <input type="text" placeholder="Name" id="name" name="name"/>
+      <p>EmailID :</p>
+      <input type="text"  placeholder="EmailID" id="email" name="email" />
+      <p>WalletID :</p>
+      <input type="text"  placeholder="WalletID" id="walletid" name="walletid"/>
+      <p>Password :</p>
+      <input type="password"  placeholder="Password Here" id="pass" name="password"/>
+      <p>Confirm Password :</p>
+      <input
+        type="password"
+        placeholder="Confirm Password Here"
+        id="cpass"
+        name="c_password"
+      />
+
+
+
+      <button type="submit" name="" value="Submit">Register User</button>
+
+      </form>
+
+      <p class="text">
+        Alread have an account?
+        <a href="/login">Log in here</a>
+      </p>
+    </div>
+
+
+
+<!-- <script>
+  function validate() { var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value; var walletid =
+  document.getElementById("walletid").value; var pass =
+  document.getElementById("pass").value; var cpass =
+  document.getElementById("cpass").value; var regname = /^[a-zA-Z]+$/; var
+  regemail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/; var regwalletid =
+  /^[a-zA-Z0-9]+$/; var regpass = /^[a-zA-Z0-9*#!@$%^&()]+$/; if (name == ""
+  || regname.test(name) == false) { alert("Name cannot be empty or enter a
+  valid name"); return false; } else if (email == "" || regemail.test(email)
+  == false) { alert("EmailID cannot be empty or enter a valid EmailID");
+  return false; } else if (walletid == "" || regwalletid.test(walletid) ==
+  false) { alert("WalletID cannot be empty or enter a valid WalletID");
+  return false; } else if (pass == "" || regpass.test(pass) == false) {
+  alert("Password cannot be empty or enter a valid password"); return false;
+  } else if (cpass == "" || regpass.test(cpass) == false) { alert("Confirm
+  Password cannot be empty or enter a valid password"); return false; } else
+  if (pass != cpass) { alert("Password and Confirm Password should be
+  same"); return false; } else { return true; } }
+</script> -->
+  </body>
+</html>

@@ -1,0 +1,152 @@
+header img{
+    height: 70px;
+    padding-left: 20px;
+}
+
+ body {
+    background-color: black;
+    height: 125vh;
+    margin-top: 80px;
+    padding: 30px;
+    color: white;
+    font-family: "Roboto", sans-serif; 
+   } 
+
+header {
+    background-color: rgb(232, 191, 43);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border-bottom: 2px solid rgb(61, 61, 61);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    font-size: 20px;
+}
+
+header h1 {
+    padding-left: 15px;
+    color: black;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+.b1{
+    background-color: #02ae58;
+    border: 2px solid #02ae58;
+    border-radius: 5px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flexbox;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    box-shadow:  5px 5px green;
+
+}
+
+.b2{
+    background-color:  #02ae58;
+    border: 2px solid #02ae58;
+    border-radius: 5px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flexbox;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+    box-shadow:  5px 5px green;
+}
+
+#Login{
+   color: black;
+   text-decoration: none;
+}
+
+#Signup{
+   color: black;
+   text-decoration: none;
+}
+
+#Login:hover{
+   color: white;
+   text-decoration: none;
+}
+
+#Signup:hover{
+   color: white;
+   text-decoration: none;
+}
+
+#Login:active{
+   color: white;
+   text-decoration: none;
+}
+
+#Signup:active{
+   color: white;
+   text-decoration: none;
+}
+
+#Login:visited{
+   color: white;
+   text-decoration: none;
+}
+
+#Signup:visited{
+   color: white;
+   text-decoration: none;
+}
+
+#Login:link{
+   color: white;
+   text-decoration: none;
+}
+
+#Signup:link{
+   color: white;
+   text-decoration: none;
+}
+
+/* css for the product cards */
+
+#if1{
+      height: 100vh;
+      padding-top: 50px;
+      margin-left: 0px;
+      padding-left: 0px;
+}
+
+#if2{
+      height: 100vh;
+      width: 75%;
+      padding-top: 50px;
+      margin-left: 0px;
+      padding-left: 0px;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <a href="#">
+      <img src="img/img.ico" />
+      <h1>NFT</h1>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="#">About</a></li> -->
+        <li><a href="Main_marketplace.html">Explore</a></li>
+        <li><a href="stats.html">Statistics</a></li>
+        <!-- <li><a href="#">Contact</a></li> -->
+        <div class="nav-left flex-div">
+          <div class="search-box flex-div">
+
+
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+          </div>
+
+        </div>
+        <button class="b1"><a href="login.html" id="Login">Login</a></button>
+        <button class="b2">
+          <a href="signup.html" id="Signup">Sign Up</a>
+        </button>
+        <div class="nav-right flex-div">
+          <div class="profil flex-div">
+            <img src="./img/cat/ranveer.jpeg" alt="My profile">
+            <p><a href ="Profile.html">Singhveer Rangh</a></p>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="middle">
+      <div class="content">
+        <h1>
+          World's Leading NFT Platform. <br /><br />
+          Get your NFT now
+        </h1>
+      </div>
+      <figure class="banner">
+        <img src="img/hero-banner.jpeg" alt="banner" />
+      </figure>
+    </div>
+
+    <div class="choose">
+      <button class="btn" onclick="trending()">Trending</button>
+      <button class="btn" onclick="latest()">Top</button>
+      <div class="right">
+        <select name="duration" id="duration">
+          <option value="day">24 Hours</option>
+          <option value="Week">past week</option>
+          <option value="Month">Month</option>
+          <option value="Year">Year</option>
+          <option value="All">All time</option>
+        </select>
+        <button class="btn1" onclick="eth()">ETH</button>
+        <button class="btn1" onclick="btc()">BSC</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div class="image">
+          <a href="AboutNFT.html"><img href="#" src="img/cat/thug.jpg" /></a>
+        </div>
+        <div class="content">
+          <h3>Thug Partyy</h3>
+          <p>This is nft#1</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img href="#" src="img/prod/prod2.png" />
+        </div>
+        <div class="content">
+          <h3>Bored Ape</h3>
+          <p>This is nft#2</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img href="#" src="img/prod/prod3.jpeg" />
+        </div>
+        <div class="content">
+          <h3>Bored Ape</h3>
+          <p>This is nft#3</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img href="#" src="img/prod/prod4.jpeg" />
+        </div>
+        <div class="content">
+          <h3>Bored Ape</h3>
+          <p>This is nft#4</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img href="#" src="img/prod/prod5.jpeg" />
+        </div>
+        <div class="content">
+          <h3>Bored Ape</h3>
+          <p>This is nft#5</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="last">
+      <h1>Search by Category</h1>
+
+      <div class="grid-container">
+        <a href="#">
+          <div class="grid-item">
+            <div class="img">
+              <img src="img/cat/music.png" alt="" />
+            </div>
+            <h1>Music</h1>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="grid-item">
+            <div class="img">
+              <img src="img/cat/bollywood.jpeg" alt="" />
+            </div>
+            <h1>Bollywood</h1>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="grid-item">
+            <div class="img">
+              <img src="img/cat/art.jpeg" alt="" />
+            </div>
+            <h1>Art</h1>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="grid-item">
+            <div class="img">
+              <img src="img/cat/clips.jpeg" alt="" />
+            </div>
+            <h1>Clips</h1>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="grid-item">
+            <div class="img">
+              <img src="img/cat/sports.jpeg" alt="" />
+            </div>
+            <h1>Sports</h1>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="grid-item">
+            <div class="img">
+              <img src="img/cat/memes.jpeg" alt="" />
+            </div>
+            <h1>Memes</h1>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container2">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Payment Issues</a></li>
+            <li><a href="#">Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Latest News</h4>
+          <ul>
+            <li><a href="#">Networks</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Learn</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><img src="img/footer/insta.png" alt="" /></a>
+            <a href="#"><img src="img/footer/twitter.jpeg" alt="" /></a>
+            <a href="#"><img src="img/footer/discord.png" alt="" /></a>
+            <a href="#"><img src="img/footer/gmail.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let btn = document.getElementsByClassName("btn");
+    let btn1 = document.getElementsByClassName("btn1");
+    // If the button is clicked, change the css of the button
+    function trending() {
+      btn[0].style.background = "rgb(232, 191, 43)";
+      btn[0].style.color = "#000";
+      btn[1].style.background = "#000";
+      btn[1].style.color = "rgb(232, 191, 43)";
+    }
+
+    // Do the same colour change for the other button
+
+    function latest() {
+      btn[1].style.background = "rgb(232, 191, 43)";
+      btn[1].style.color = "#000";
+      btn[0].style.background = "#000";
+      btn[0].style.color = "rgb(232, 191, 43)";
+    }
+
+
+    function eth() {
+      btn1[0].style.background = "rgb(232, 191, 43)";
+      btn1[0].style.color = "#000";
+      btn1[1].style.background = "#000";
+      btn1[1].style.color = "rgb(232, 191, 43)";
+    }
+
+    function btc() {
+      btn1[1].style.background = "rgb(232, 191, 43)";
+      btn1[1].style.color = "#000";
+      btn1[0].style.background = "#000";
+      btn1[0].style.color = "rgb(232, 191, 43)";
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>
